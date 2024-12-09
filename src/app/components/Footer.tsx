@@ -12,7 +12,7 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Links Section */}
+        
         <div>
           <h3 className="font-semibold text-lg text-gray-400">Links</h3>
           <ul className="space-y-4 mt-6">
@@ -39,7 +39,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Help Section */}
+        
         <div>
           <h3 className="font-semibold text-lg text-gray-400">Help</h3>
           <ul className="space-y-4 mt-6">

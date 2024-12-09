@@ -1,4 +1,3 @@
-import Footer from "./components/Footer"
 import Hero from "./components/Hero"
 import HeroSection from "./components/Herosection"
 import Product from "./components/Product"

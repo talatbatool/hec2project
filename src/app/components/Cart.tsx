@@ -30,7 +30,7 @@ const Cart = () => {
           <div className="flex items-center justify-between pb-4 ">
             {/* Product Image */}
             <div className="flex items-center space-x-4 ">
-              <img
+              <Image width={200} height={200}
                 src="/Mask group.png" 
                 alt="Asgaard sofa"
                 className="h-[105px] w-[108px] object-cover rounded-md"
