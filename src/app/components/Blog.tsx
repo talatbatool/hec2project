@@ -1,146 +1,166 @@
-import React from "react";
-import Image from "next/image";
+// pages/blog.js
+import Image from 'next/image';
 
-const BlogLayout = () => {
-  
-  const posts = [
-    {
-      id:0,
-      image:"/Group 78 (2).png"
-
-    },
-    {
-      id: 1,
-      title: "Going all-in with millennial design",
-      category: "Wood",
-      date: "14 Oct 2022",
-      image: "Rectangle 68.png/",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
-    {
-      id: 2,
-      title: "Exploring new ways of decorating",
-      category: "Handmade",
-      date: "14 Oct 2022",
-      image: "/Rectangle 68 (1).png",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
-  ];
-
-  const categories = [
-    { name: "Crafts", count: 2 },
-    { name: "Design", count: 8 },
-    { name: "Handmade", count: 7 },
-    { name: "Interior", count: 1 },
-    { name: "Wood", count: 6 },
-  ];
-
-  const recentPosts = [
-    "Going all-in with millennial design",
-    "Exploring new ways of decorating",
-    "Handmade pieces that took time to make",
-    "Modern home in Milan",
-    "Colorful office redesign",
-  ];
-
+export default function Blog() {
   return (
-    <div className="bg-gray-50 min-h-screen">
-      <div className="container mx-auto p-4 lg:p-8">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* Blog Posts */}
-          <div className="lg:col-span-3 space-y-8">
-            {posts.map((post) => (
-              <div
-                key={post.id}
-                className="bg-white rounded-lg shadow-md overflow-hidden"
+    <div className="bg-gray-100">
+      {/* Banner Section */}
+      <div className="relative w-full h-64 md:h-96">
+        <Image
+          src="/Group 78 (2).png" // Ensure this image is saved in the public folder
+          alt="Blog Banner"
+          layout="fill"
+          objectFit="cover"
+          className="rounded-b-lg"
+        />
+        
+        
+        
+      </div>
+
+      {/* Blog Content */}
+      <div className="max-w-7xl mx-auto py-10 px-4">
+        <div className="flex flex-col md:flex-row">
+          {/* Main Content */}
+          <div className="w-full md:w-2/3">
+            {/* Post 1 */}
+            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+              <Image
+                src="/Rectangle 68.png" // Replace with your own blog post image
+                alt="Post 1"
+                width={600}
+                height={400}
+                className="rounded-lg"
+              />
+              <h2 className="text-2xl font-semibold mt-4">
+                Going all-in with millennial design
+              </h2>
+              <p className="text-gray-500 text-sm mt-2">Admin | 14 Oct 2022 | Wood</p>
+              <p className="text-gray-700 mt-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+              </p>
+              <a
+                href="#"
+                className="text-blue-500 hover:underline mt-4 block"
               >
-                <Image alt="Image" width={200} height={200}
-                  src={post.image}
-                  
-                  className="w-full h-56 object-cover"
-                />
-                <div className="p-6">
-                  <div className="flex items-center text-sm text-gray-500 space-x-3">
-                    <span>Admin</span>
-                    <span>•</span>
-                    <span>{post.date}</span>
-                    <span>•</span>
-                    <span>{post.category}</span>
-                  </div>
-                  <h2 className="mt-2 text-lg font-semibold text-gray-800">
-                    {post.title}
-                  </h2>
-                  <p className="mt-3 text-sm text-gray-600">
-                    {post.description}
-                  </p>
-                  <a
-                    href="#"
-                    className="block mt-4 text-blue-600 hover:underline text-sm"
-                  >
-                    Read more
-                  </a>
-                </div>
-              </div>
-            ))}
+                Read more
+              </a>
+            </div>
+
+            {/* Post 2 */}
+            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+              <Image
+                src="/Rectangle 68 (1).png" // Replace with your own blog post image
+                alt="Post 2"
+                width={600}
+                height={400}
+                className="rounded-lg"
+              />
+              <h2 className="text-2xl font-semibold mt-4">
+                Exploring new ways of decorating
+              </h2>
+              <p className="text-gray-500 text-sm mt-2">Admin | 14 Oct 2022 | Handmade</p>
+              <p className="text-gray-700 mt-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+              </p>
+              <a
+                href="#"
+                className="text-blue-500 hover:underline mt-4 block"
+              >
+                Read more
+              </a>
+            </div>
+
+            {/* New Post */}
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <Image
+                src="/Rectangle 68 (2).png" // Save this image in the public folder
+                alt="Handmade pieces"
+                width={600}
+                height={400}
+                className="rounded-lg"
+              />
+              <h2 className="text-2xl font-semibold mt-4">
+                Handmade pieces that took time to make
+              </h2>
+              <p className="text-gray-500 text-sm mt-2">Admin | 14 Oct 2022 | Wood</p>
+              <p className="text-gray-700 mt-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+              </p>
+              <a
+                href="#"
+                className="text-blue-500 hover:underline mt-4 block"
+              >
+                Read more
+              </a>
+            </div>
           </div>
 
           {/* Sidebar */}
-          <div className="space-y-8">
-            {/* Categories */}
+          <div className="w-full md:w-1/3 md:pl-6 mt-10 md:mt-0">
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">
-                Categories
-              </h3>
-              <ul className="space-y-3">
-                {categories.map((category) => (
-                  <li
-                    key={category.name}
-                    className="flex justify-between text-sm text-gray-600"
-                  >
-                    <span>{category.name}</span>
-                    <span>{category.count}</span>
-                  </li>
-                ))}
+              <h3 className="text-xl font-semibold">Categories</h3>
+              <ul className="mt-4 space-y-2">
+                <li>
+                  <a href="#" className="text-gray-700 hover:underline">
+                    Crafts (2)
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-700 hover:underline">
+                    Design (8)
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-700 hover:underline">
+                    Handmade (7)
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-700 hover:underline">
+                    Interior (1)
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-700 hover:underline">
+                    Wood (6)
+                  </a>
+                </li>
               </ul>
             </div>
-
-            {/* Recent Posts */}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">
-                Recent Posts
-              </h3>
-              <ul className="space-y-3">
-                {recentPosts.map((post, index) => (
-                  <li
-                    key={index}
-                    className="text-sm text-gray-600 hover:underline"
-                  >
-                    {post}
-                  </li>
-                ))}
+            <div className="bg-white rounded-lg shadow-md p-6 mt-6">
+              <h3 className="text-xl font-semibold">Recent Posts</h3>
+              <ul className="mt-4 space-y-4">
+                <li>
+                  <a href="#" className="text-gray-700 hover:underline">
+                    Going all-in with millennial design
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-700 hover:underline">
+                    Exploring new ways of decorating
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-700 hover:underline">
+                    Handmade pieces that took time to make
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-700 hover:underline">
+                    Modern home in Milan
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-700 hover:underline">
+                    Colorful office redesign
+                  </a>
+                </li>
               </ul>
-            </div>
-
-            {/* Search */}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <input
-                type="text"
-                placeholder="Search"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
-              />
             </div>
           </div>
         </div>
       </div>
-      <div>
-                <Image height={270} width={1440} alt="logo" src="/fr.png" />
-                </div>
     </div>
   );
-};
-
-
-
-export default BlogLayout;
+}

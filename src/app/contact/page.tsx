@@ -1,10 +1,11 @@
+
 "use client"
 import React, { useState } from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoTimeSharp } from "react-icons/io5";
 
-const ContactForm = () => {
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -170,4 +171,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default Contact;
