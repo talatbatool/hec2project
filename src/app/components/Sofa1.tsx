@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react";
-
+import Image from "next/image";
 export default function ProductPage() {
   const [quantity, setQuantity] = useState(1);
 
@@ -15,11 +15,14 @@ export default function ProductPage() {
           {/* Image Gallery */}
           <div>
             <div className="aspect-w-1 aspect-h-1 bg-gray-100 rounded-md">
-              <img
+              <Image
                 src="/Group 102.png"
                 alt="Asgaard Sofa"
+                width={200}
+                height={400}
+                
                 className="w-full h-full object-cover rounded-md"
-              />
+              ></Image>
             </div>
             <div className="flex gap-2 mt-4">
               

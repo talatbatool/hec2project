@@ -1,5 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+import CheckoutPage from './Checkout'
 
 const Cart = () => {
   return (
@@ -110,4 +112,4 @@ const Cart = () => {
   )
 }
 
-export default Cart
+export default Cart 

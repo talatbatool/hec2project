@@ -24,6 +24,7 @@ export default function Home(){
       <Sofa1/>
       <Sofa/>
       <Shop/>
+      
       <Cart/>
       <Checkout/>
       <Productcomp/>
