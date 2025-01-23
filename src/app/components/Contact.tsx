@@ -1,10 +1,10 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoTimeSharp } from "react-icons/io5";
 
-const ContactForm = () => {
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -12,11 +12,11 @@ const ContactForm = () => {
     message: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(formData);
     setFormData({
@@ -33,14 +33,9 @@ const ContactForm = () => {
       <div
         className="bg-cover bg-center h-72 flex items-center justify-center"
         style={{
-          backgroundImage: "url('/Group 78 (4).png')", 
+          backgroundImage: "url('/Group 78 (4).png')",
         }}
-      >
-        
-          
-          
-        
-      </div>
+      ></div>
 
       {/* Content Section */}
       <div className="container mx-auto p-8 lg:px-16">
@@ -59,7 +54,9 @@ const ContactForm = () => {
                 <div>
                   <p className="font-medium text-gray-800">Address</p>
                   <p className="text-gray-600">
-                    236 5th SE Avenue, New York<br />NY10000, United States
+                    236 5th SE Avenue, New York
+                    <br />
+                    NY10000, United States
                   </p>
                 </div>
               </div>
@@ -69,7 +66,9 @@ const ContactForm = () => {
                 <div>
                   <p className="font-medium text-gray-800">Phone</p>
                   <p className="text-gray-600">
-                    Mobile: +(84) 546-6789<br />Hotline: +(84) 456-6789
+                    Mobile: +(84) 546-6789
+                    <br />
+                    Hotline: +(84) 456-6789
                   </p>
                 </div>
               </div>
@@ -79,7 +78,9 @@ const ContactForm = () => {
                 <div>
                   <p className="font-medium text-gray-800">Working Time</p>
                   <p className="text-gray-600">
-                    Monday-Friday: 9:00 - 22:00<br />Saturday-Sunday: 9:00 - 21:00
+                    Monday-Friday: 9:00 - 22:00
+                    <br />
+                    Saturday-Sunday: 9:00 - 21:00
                   </p>
                 </div>
               </div>
@@ -141,33 +142,16 @@ const ContactForm = () => {
                 <button
                   type="submit"
                   className="w-full bg-yellow-500 text-white font-medium py-3 rounded-md hover:bg-yellow-600 transition"
-                >submit
+                >
+                  Submit
                 </button>
               </div>
             </form>
-        
-        
-            
-            
-            
-          
-        </div>
-
           </div>
         </div>
       </div>
-        
-     
-        
-    
-          
-            
-          
-            
-      
-   
-    
+    </div>
   );
 };
 
-export default ContactForm;
+export default Contact;
